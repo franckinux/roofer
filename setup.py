@@ -6,21 +6,20 @@
 License : GPL v3"""
 
 from distutils.core import setup
-from setuptools import find_packages
+
+import roofer
 
 setup(name = "roofer",
-    version = "0.0.1",
-    description = "",
+    version = roofer.__version__,
+    description = "Recover an image from the tiles (deep zoom format) generated from this image.",
     author = "Franck Barbenoire",
-    author_email = "conatct@franck-barbenoire.fr",
+    author_email = "contact@franck-barbenoire.fr",
     url = "https://github.com/franckinux/roofer",
-    packages = find_packages(),
-    include_package_data = True,
-    #zip_safe = False,
+    py_modules=["roofer"],
     install_requires = ['Pillow',],
     classifiers = ['Development Status :: 3 - Alpha',
                    'License :: OSI Approved :: GNU General Public License (GPL)',
-                   'Programming Language :: Python :: 2.7',
-                   'Programming Language :: Python :: 3.4',
+                   'Programming Language :: Python :: 2',
+                   'Programming Language :: Python :: 3',
                    'Topic :: Multimedia :: Graphics :: Graphics Conversion']
 )

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Copyright 2014 by Franck Barbenoire <fbarbenoire@yahoo.fr>
+Copyright 2014 by Franck Barbenoire <contact@franck-barbenoire.fr>
 
 This program is based on this article from Daniel Gasienica :
     http://www.gasi.ch/blog/inside-deep-zoom-2/
@@ -34,6 +34,7 @@ except ImportError:
 from xml.dom import minidom
 #import pdb; pdb.set_trace()
 
+__version__ = '0.0.2'
 
 class Roofer(object):
     def __init__(self, xml_url, dir_suffix='_files', mode='RGB'):
@@ -195,14 +196,13 @@ class Roofer(object):
         return full_img
 
 if __name__ == "__main__":
-    # when invoked as main, assembles the tiled image to a full image
+    # when invoked as main, assembles the tiled images to a full image
 
     try:
         input = raw_input
     except NameError:
         pass
 
-    import pdb; pdb.set_trace()
     import argparse
     try:
         from urllib.parse import urlparse
@@ -216,7 +216,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     input_file = args.infile
-    if urlparse(input_file).scheme != 'http':
+    if urlparse(input_file).scheme == '':
         input_file = 'file://' + input_file
 
     roofer = Roofer(input_file, dir_suffix='')

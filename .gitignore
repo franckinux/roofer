@@ -1,3 +1,6 @@
-dist *~
+dist
+*~
+*.pyc
 *.egg-info
 .ropeproject
+MANIFEST

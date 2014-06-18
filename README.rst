@@ -6,7 +6,7 @@ Franck Barbenoire <contact@franck-barbenoire.fr>
 Software version
 ================
 
-Version 0.0.1, June 12th, 2014.
+Version 0.0.2, June 18th, 2014.
 
 License
 =======
@@ -38,16 +38,13 @@ Methods :
 
 - image_size(level) : get the size of the final image for a given level
 
-- get_level_size(level) : returns a tuple (width, height, columns, rows) for a
-                          level
+- get_level_size(level) : returns a tuple (width, height, columns, rows) for a level
 
-- get_tile_image(level, column, row) : returns a tile image from a level at given
-                                       coordinates
+- get_tile_image(level, column, row) : returns a tile image from a level at given coordinates (row, column)
 
-- get_level_image(level) : builds and returns the whole image corresponding to a
-                           level
+- get_level_image(level) : builds and returns the whole image corresponding to a level
 
-- get_level_image_t(level, tasks=2) : same as et_level_image but using threads
+- get_level_image_t(level, tasks=2) : same as get_level_image but using threads (experimental)
 
 Required packages
 =================
