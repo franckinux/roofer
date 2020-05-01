@@ -1,5 +1,4 @@
-#!/usr/bin/python2
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3
 
 """
 Copyright 2014 by Franck Barbenoire <contact@franck-barbenoire.fr>
@@ -211,7 +210,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-l', '--level', type=int, default=-1)
-    parser.add_argument('infile', help='Input directory or url')
+    parser.add_argument('infile', help='xml file (path or url)')
     parser.add_argument('outfile', help='Output image file')
     args = parser.parse_args()
 
