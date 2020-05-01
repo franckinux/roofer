@@ -31,9 +31,8 @@ try:
 except ImportError:
     from urllib2 import urlopen
 from xml.dom import minidom
-#import pdb; pdb.set_trace()
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 class Roofer(object):
     def __init__(self, xml_url, dir_suffix='_files', mode='RGB'):
